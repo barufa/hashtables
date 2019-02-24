@@ -18,7 +18,7 @@ This package currently contains three hash table implementations:
   2. `Data.HashTable.ST.Cuckoo` contains an implementation of "cuckoo hashing"
      as introduced by Pagh and Rodler in 2001 (see
      [http://en.wikipedia.org/wiki/Cuckoo\_hashing](http://en.wikipedia.org/wiki/Cuckoo_hashing)).
-     Cuckoo hashing has worst-case /O(1)/ lookups and can reach a high "load
+     Cuckoo hashing has worst-case *O(1)* lookups and can reach a high "load
      factor", in which the table can perform acceptably well even when more
      than 90% full. Randomized testing shows this implementation of cuckoo
      hashing to be slightly faster on insert and slightly slower on lookup than
@@ -62,18 +62,18 @@ This package accepts a couple of different cabal flags:
     emptor. In particular, these techniques are incompatible with HPC code
     coverage reports.
 
-  * `sse41`, default /off/. If this flag is enabled, we use some SSE 4.1
+  * `sse41`, default **off**. If this flag is enabled, we use some SSE 4.1
     instructions (see
     [http://en.wikipedia.org/wiki/SSE4](http://en.wikipedia.org/wiki/SSE4),
     first available on Intel Core 2 processors) to speed up cache-line searches
     for cuckoo hashing.
 
-  * `bounds-checking`, default *off*. If this flag is enabled, array accesses
+  * `bounds-checking`, default **off**. If this flag is enabled, array accesses
     are bounds-checked.
 
-  * `debug`, default *off*. If turned on, we'll rudely spew debug output to
+  * `debug`, default **off**. If turned on, we'll rudely spew debug output to
     stdout.
 
-  * `portable`, default *off*. If this flag is enabled, we use only pure
+  * `portable`, default **off**. If this flag is enabled, we use only pure
     Haskell code and try not to use unportable GHC extensions. Turning this
     flag on forces `unsafe-tricks` and `sse41` *OFF*.
