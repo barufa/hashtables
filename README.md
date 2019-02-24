@@ -68,12 +68,12 @@ This package accepts a couple of different cabal flags:
     first available on Intel Core 2 processors) to speed up cache-line searches
     for cuckoo hashing.
 
-  * `bounds-checking`, default /off/. If this flag is enabled, array accesses
+  * `bounds-checking`, default *off*. If this flag is enabled, array accesses
     are bounds-checked.
 
-  * `debug`, default /off/. If turned on, we'll rudely spew debug output to
+  * `debug`, default *off*. If turned on, we'll rudely spew debug output to
     stdout.
 
-  * `portable`, default /off/. If this flag is enabled, we use only pure
+  * `portable`, default *off*. If this flag is enabled, we use only pure
     Haskell code and try not to use unportable GHC extensions. Turning this
     flag on forces `unsafe-tricks` and `sse41` *OFF*.
